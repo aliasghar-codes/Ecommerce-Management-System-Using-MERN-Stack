@@ -1,0 +1,102 @@
+.login-main{
+    display: flex;
+    margin: 13vh 0;
+    gap: 3%;
+    align-items: center;
+}
+.login-main img{
+    width: 50%;
+}
+.login-main .main-content{
+    width: 40%;
+}
+.login-main .main-content h2{
+    margin-bottom: 2vh;
+    font-size: 3rem;
+}
+.login-main .main-content p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 3vh;
+}
+.login-main .main-content form input{
+    width: 100%;
+    margin: 3vh 0;
+    padding: 2vh 0;
+    border: none;
+    border-bottom: .5px solid grey;
+    outline: none;
+}
+.login-main .main-content form .error{
+    color: red;
+    font-size: 1.2rem;
+}
+.login-main .main-content button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.login-main .login{
+    margin-top: 4vh;
+    display: flex;
+    gap: 1.5rem;
+}
+.login-main .login a{
+    text-decoration: underline;
+}
+.login-main .login a:hover{
+    color: rgb(41, 41, 41);
+}
+.login-main .buttons button{
+    width: 30%;
+    margin: 0;
+}
+.login-main .buttons{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin: 5vh 0;
+}
+.login-main .buttons a{
+    color: var(--color-primary);
+}
+@media screen and (max-width: 1070px){
+    .main-content form input{
+        margin: 1vh;
+    }
+    .login{
+        margin-top: 2vh;
+    }
+    .main-content p{
+        margin-bottom: 0px;
+    }
+    .main-content h2{
+        margin-bottom: 1vh;
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+    .main-content p{
+        margin-left: 1rem;
+    }
+}
+@media screen and (max-width: 765px){
+    main img{
+        display: none;
+    }
+    .main-content{
+        padding: 0 5rem;
+        width: 100%;
+    }
+    .main-content form input{
+        margin: 5vh 0;
+    }
+    .main-content h2{
+        margin-left: 0rem;
+    }
+    .main-content p{
+        margin-left: 0rem;
+    }
+}

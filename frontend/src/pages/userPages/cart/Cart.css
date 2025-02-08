@@ -1,0 +1,22 @@
+.cart-main .headings{
+    display: grid;
+    grid-template-columns: 55% 15% 15% 15%;
+    gap: 1%;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    box-shadow: #c7c7c7 3px 3px 8px 0px;
+    border-radius: 5px;
+    padding: 4vh 5vh;
+    background-color: var(--color-white-2);
+}
+.cart-main .product{
+    border-radius: 5px;
+    padding: 0vh 5vh;
+    background-color: var(--color-white-2);
+    box-shadow: #c7c7c7 3px 3px 8px 0px;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 55% 15% 15% 15%;
+    gap: 1%;
+    align-items: center;
+}
