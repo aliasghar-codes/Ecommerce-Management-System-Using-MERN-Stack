@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom"
 import { setIsAuthenticated, setUser } from '../../context/slices/auth';
 
 const AdminHeader = ({ heading }) => {
@@ -11,6 +12,7 @@ const AdminHeader = ({ heading }) => {
     const adminName = useSelector(state => state.user.userName);
 
     const dispatch = useDispatch();
+    const navigateTo = useNavigate();
 
     useEffect(() => {
         let dummyString = "";
@@ -35,6 +37,8 @@ const AdminHeader = ({ heading }) => {
             localStorage.clear();
             dispatch(setIsAuthenticated(false));
             dispatch(setUser({}));
+
+            navigateTo("/admin-login");
 
         } catch (error) {
             error.response ? toast.error(error.response.data.message) : toast.error(error);

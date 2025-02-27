@@ -55,8 +55,8 @@ const Contact = () => {
     }
 
     return (
-        <main className="px-40 flex flex-wrap justify-between">
-            <div className="w-1/4 shadow-lg my-36 rounded-lg px-12 py-20 border-t-2 border-slate-50">
+        <main className="lg:px-40 px-6 flex flex-wrap-reverse justify-between">
+            <div className="lg:w-1/4 w-full shadow-lg lg:my-36 mb-36 rounded-lg px-12 py-20 border-t-2 border-slate-50">
                 <div className="flex items-center mb-12">
                     <div className="mr-6 bg-red-500 text-white rounded-full h-10 w-10 flex justify-center items-center p-3">
                         <BsTelephoneFill />
@@ -81,27 +81,27 @@ const Contact = () => {
                 <p 
                     className='font-semibold mb-6 text-xl'>Email: support@test.com</p>
             </div>
-            <div className="shadow-lg w-[70%] my-36 rounded-lg px-14 py-20 border-t-2 border-slate-50">
+            <div className="shadow-lg lg:w-[70%] w-full my-36 rounded-lg px-5 lg:px-14 py-20 border-t-2 border-slate-50">
                 <form onSubmit={handleUserContact}>
-                    <div className="flex justify-between mb-12">
+                    <div className="flex flex-wrap gap-10 lg:gap-0 justify-between mb-12">
                         <input
                             type="text"
                             placeholder="Your Name*"
                             value={name}
                             onChange={({ target }) => setName(target.value)}
-                            className='w-[30%] outline-none bg-slate-50 py-6 px-10' />
+                            className='lg:w-[30%] w-full outline-none bg-slate-50 py-6 px-5 lg:px-10' />
                         <input
                             type="email"
                             placeholder="Your Email*"
                             value={email}
                             onChange={({ target }) => setEmail(target.value)}
-                            className='w-[30%] outline-none bg-slate-50 py-6 px-10' />
+                            className='lg:w-[30%] w-full outline-none bg-slate-50 py-6 px-5 lg:px-10' />
                         <input
                             type="text"
                             placeholder="Your Phone"
                             value={phone}
                             onChange={({ target }) => setPhone(target.value)}
-                            className='w-[30%] outline-none bg-slate-50 py-6 px-10' />
+                            className='lg:w-[30%] w-full outline-none bg-slate-50 py-6 px-5 lg:px-10' />
                     </div>
                     <textarea
                         placeholder="Your Message"
@@ -109,7 +109,7 @@ const Contact = () => {
                         rows="10"
                         value={message}
                         onChange={({ target }) => setMessage(target.value)}
-                        className='resize-none w-full outline-none bg-slate-50 py-6 px-10' >
+                        className='resize-none w-full outline-none bg-slate-50 py-6 px-5 lg:px-10 lg:h-auto h-36' >
                     </textarea>
                     <button className="ml-auto block font-semibold text-white bg-red-500 hover:bg-red-600 py-5 px-8 text-xl rounded mt-14">
                         Send Message

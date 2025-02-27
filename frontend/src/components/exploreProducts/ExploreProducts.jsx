@@ -17,9 +17,9 @@ const ExploreProducts = () => {
     }
 
     return (
-        <section className="pt-36 mb-44 px-40">
+        <section className="pt-36 mb-44 lg:px-40 px-6">
             <div className="heading">Our Products</div>
-            <h2 className='text-6xl font-semibold mt-16 mb-36' >
+            <h2 className='lg:text-6xl text-4xl font-medium lg:font-semibold mt-16 lg:mb-36 mb-24' >
                 Explore Our Products
             </h2>
             <div className="flex w-full justify-between flex-wrap">
@@ -38,7 +38,7 @@ const ExploreProducts = () => {
                 }
             </div>
             <Link to="/products/category/sports" 
-                className="text-white bg-red-500 hover:bg-red-600 py-6 rounded text-3xl font-light mx-auto block w-1/6 text-center">
+                className="text-white bg-red-500 hover:bg-red-600 py-6 rounded text-3xl font-light mx-auto block lg:w-1/6 text-center">
                     View All Products
             </Link>
         </section>

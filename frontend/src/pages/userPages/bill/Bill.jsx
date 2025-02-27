@@ -97,11 +97,11 @@ const Bill = () => {
     return (
         <>
             <h1
-                className='pl-40 text-5xl border-r-2 w-1/2 pt-20 font-bold tracking-normal pb-14'>
+                className='lg:pl-40 pl-6 text-5xl lg:border-r-2 w-1/2 pt-20 font-bold tracking-normal pb-14'>
                 Checkout
             </h1>
-            <main className='px-40 flex'>
-                <div className='w-1/2 border-r-2 pb-32 pr-24'>
+            <main className='lg:px-40 px-6 flex flex-wrap'>
+                <div className='lg:w-1/2 w-full lg:border-r-2 pb-32 lg:pr-24'>
                     <h2 className='text-3xl font-bold tracking-normal mb-10'>
                         Shipping info
                     </h2>
@@ -214,7 +214,7 @@ const Bill = () => {
                         </div>
                     </form>
                 </div>
-                <div className='w-1/2 pl-24 pb-32'>
+                <div className='lg:w-1/2 lg:pl-24 pb-32'>
                     <h2 className='text-3xl font-bold tracking-normal mb-10'>
                         Review your cart
                     </h2>

@@ -16,7 +16,7 @@ const RelatedProducts = ({ category }) => {
     }
 
     return (
-        <section style={{ paddingBottom: "4.5rem" }} className="container border-b-2 border-b-slate-200">
+        <section style={{ paddingBottom: "4.5rem" }} className="border-b-2 border-b-slate-200">
                 <h2 className='text-4xl font-bold mb-20'>Related Products</h2>
                 <div className="mt-15 flex w-full flex-wrap gap-[1%] mb-20">
                     {
@@ -33,7 +33,7 @@ const RelatedProducts = ({ category }) => {
                         ))
                     }
                 </div>
-                <Link to="/products" className="main-btn">View All Products</Link>
+                <Link to="/products" className="w-1/2 lg:w-1/5 text-center bg-red-500 text-white hover:bg-red-600 mx-auto block py-4 rounded font-medium">View All Products</Link>
             </section>
     )
 }

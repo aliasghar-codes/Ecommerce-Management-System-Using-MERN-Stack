@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import "../login/Login.css"
 import authImg from "../../../assets/images/cart with mobile.png"
 import axios from "axios"
 import { useDispatch, useSelector } from "react-redux"
@@ -78,41 +77,52 @@ const Signup = () => {
     }
 
     return (
-        <main className='login-main'>
-            <img src={authImg} alt="" />
-            <div className="main-content">
-                <h2>Create an account</h2>
-                <p>Enter your details below</p>
+        <main className='flex my-36 gap-20 items-center px-6 lg:px-0'>
+            <img src={authImg} alt=""
+                className='w-1/2 rounded hidden lg:block' />
+            <div className="lg:w-2/5 w-full">
+                <h2 className='lg:mb-10 mb-6 text-4xl lg:text-5xl'>Create an account</h2>
+                <p className='lg:text-xl text-base mb-20 text-slate-400'>Enter your details below</p>
                 <form onSubmit={handleRegister}>
                     <input
                         type="text"
+                        style={{borderBottom: "2px solid rgba(128, 128, 128, 0.200)"}}
+                        className='w-full lg:my-5 my-4 py-5 lg:border-none border-2 outline-none px-4 lg:px-0'
                         placeholder="Username"
                         value={userName}
                         onChange={e => { setUserName(e.target.value) }}
                     />
                     <input
                         type="email"
+                        style={{borderBottom: "2px solid rgba(128, 128, 128, 0.200)"}}
+                        className='w-full lg:my-5 my-4 py-5 lg:border-none border-2 outline-none px-4 lg:px-0'
                         placeholder="Email"
                         value={email}
                         onChange={e => { setEmail(e.target.value) }}
                     />
                     <input
                         type="password"
+                        style={{borderBottom: "2px solid rgba(128, 128, 128, 0.200)"}}
+                        className='w-full lg:my-5 my-4 py-5 lg:border-none border-2 outline-none px-4 lg:px-0'
                         placeholder="Password"
                         value={password}
                         onChange={e => { setPassword(e.target.value) }}
                     />
                     <input
                         type="password"
+                        style={{borderBottom: "2px solid rgba(128, 128, 128, 0.200)"}}
+                        className='w-full lg:my-5 my-4 py-5 lg:border-none border-2 outline-none px-4 lg:px-0'
                         placeholder="Confirm Password"
                         value={confirmPassword}
                         onChange={e => { setConfirmPassword(e.target.value) }}
                     />
                     <p className='error'>{error}</p>
-                    <button type='submit' className="main-btn">Create Account</button>
-                    <div className="login">
-                        <p>Already have an account?</p>
-                        <Link to="/login">Login</Link>
+                    <button type='submit' className="w-full my-10 text-white bg-red-500 hover:bg-red-600 py-5 rounded">Create Account</button>
+                    <div className="lg:mt-10 mt-5 flex items-center gap-6">
+                        <p className='text-xl lg:text-2xl'>Already have an account?</p>
+                        <Link to="/login" className='underline hover:text-slate-800 text-xl lg:text-2xl'>
+                            Login
+                        </Link>
                     </div>
                 </form>
             </div>

@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { setIsAuthenticated, setUser } from '../../../context/slices/auth.js'
 import axios from 'axios'
-import "./Login.css"
 import authImg from "../../../assets/images/cart with mobile.png"
 import { toast } from 'react-toastify'
 
@@ -65,28 +64,37 @@ const Login = () => {
     }
 
     return (
-        <main className='login-main'>
-        <img src={ authImg } alt="" />
-        <div className="main-content">
-            <h2>Login to PSM</h2>
-            <p>Enter your details below</p>
+        <main className='flex my-36 gap-20 items-center px-6 lg:px-0' >
+        <img src={ authImg } alt=""
+            className='w-1/2 rounded hidden lg:block' />
+        <div className="lg:w-2/5 w-full">
+            <h2 className='lg:mb-10 mb-6 text-4xl lg:text-5xl'>Login to PSM</h2>
+            <p className='lg:text-xl text-base mb-20 text-slate-400'>Enter your details below</p>
             <form onSubmit={ handleLogin }>
-                <input 
+                <input
+                    style={{borderBottom: "2px solid rgba(128, 128, 128, 0.200)"}}
+                    className='w-full my-10 py-5 lg:border-none border-2 outline-none px-4 lg:px-0' 
                     type="email" 
                     placeholder="Email or Phone Number" 
                     value={ email }
                     onChange={ ({ target }) => setEmail(target.value)}
                 />
-                <input 
+                <input
+                    style={{borderBottom: "2px solid rgba(128, 128, 128, 0.200)"}}
+                    className='w-full my-10 py-5 lg:border-none border-2 outline-none px-4 lg:px-0' 
                     type="password" 
                     placeholder="Password" 
                     value={ password }
                     onChange={ ({ target }) => setPassword(target.value)}
                 />
-                <button type='submit' className="main-btn">Login</button>
-                <div className="login">
-                    <p>Don't have an account?</p>
-                    <Link to="/signup">Signup</Link>
+                <button type='submit' className="w-full my-10 text-white bg-red-500 hover:bg-red-600 py-5 rounded">Login</button>
+                <div className="mt-14 flex items-center gap-6">
+                    <p className='text-xl lg:text-2xl'>Don't have an account?</p>
+                    <Link
+                        className='underline hover:text-slate-800 text-xl lg:text-2xl'
+                        to="/signup" >
+                        Signup
+                    </Link>
                 </div>
             </form>
         </div>

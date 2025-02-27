@@ -1,22 +1,9 @@
-.sixth-section{
-    padding-top: 10vh;
-}
-.sixth-section h2{
-    font-size: 4rem;
-    font-weight: 600;
-    margin-top: 5vh;
-    margin-bottom: 8vh;
-}
 .sixth-container{
     color: white; 
     display: grid;
     grid-template-columns: 45% 25% 25%;
     grid-template-rows: 45vh 45vh;
-    gap: 25px;
-}
-.sixth-container h3{
-    font-weight: 500;
-    font-size: 3rem;
+    gap: 2rem;
 }
 .sixth-left{
     background-image: url("../../assets/images/ps5.png");
@@ -25,7 +12,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     border-radius: 5px;
-    padding: 5vh;
+    padding: 3rem;
     display: flex;
     justify-content: end;
     flex-direction: column;
@@ -33,27 +20,19 @@
 }
 .sixth-container p{
     width: 60%;
-    margin: 2vh 0;
+    margin: 2rem 0;
     text-align: left;
     color: rgb(201, 200, 200);
     line-height: 2.2rem;
     font-size: 1.2rem;
 }
-.sixth-section a{
-    color: rgb(201, 200, 200);
-    text-decoration: underline;
-    transition: .2s ease;
-}
-.sixth-section a:hover{
-    color: white;
-}
 .sixth-right-top{
+    grid-column: 2 / span 2;
     background-color: #0d0d0d;
     display: flex;
     flex-direction: column;
-    grid-column: 2 / span 2;
     justify-content: end;
-    padding: 5vh;
+    padding: 3rem;
     background-image: url("../../assets/images/woman.png");
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -69,7 +48,7 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding: 5vh;
+    padding: 3rem;
     border-radius: 5px;
     background-image: url("../../assets/images/speakers.png");
     background-size: 60%;
@@ -79,20 +58,36 @@
 .sixth-right-bottom-1 p, .sixth-right-bottom-2 p{
     width: 100%;
     margin: 1.3vh 0;
-    font-size: 1.2rem;
-}
-.sixth-right-bottom-1 a, .sixth-right-bottom-2 a{
-    font-size: 1.3rem;
 }
 .sixth-right-bottom-2{
     background-color: #0d0d0d;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding: 5vh;
+    padding: 3rem;
     border-radius: 5px;
     background-image: url("../../assets/images/perfumes.png");
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
+}
+@media screen and (max-width: 768px) {
+    .sixth-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 35rem 25rem 20rem; 
+        gap: 1rem;
+    }
+    .sixth-left{
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 2;
+    }
+    .sixth-right-top{
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 2;
+    }
+    .sixth-container p{
+        margin: 1rem 0;
+        font-size: .9rem;
+        line-height: 1.5rem;
+    }
 }

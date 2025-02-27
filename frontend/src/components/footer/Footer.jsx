@@ -26,10 +26,8 @@ const Footer = () => {
                 <div className="footer-three">
                     <h3>Account</h3>
                     <div className="links">
-                        {/* <a href="#">My Account</a> */}
                         <Link to="/login">Login / Register</Link>
                         <Link to="/cart">Cart</Link>
-                        {/* <Link to="/wishlist">Wishlist</Link> */}
                         <Link to="/products/category/a">Shop</Link>
                     </div>
                 </div>

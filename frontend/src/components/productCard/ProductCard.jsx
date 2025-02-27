@@ -7,7 +7,7 @@ import { FaRegStar, FaStar } from "react-icons/fa6";
 const ProductCard = ({ productName, productPrice, productRating, productReviews, imgUrl, productId }) => {
 
     return (
-        <div className="card shadow-xl w-[24%] px-4 pb-10 pt-4 border-2 border-white hover:border-slate-200 cursor-pointer rounded-xl mb-20">
+        <div className="card shadow-xl lg:w-[24%] w-full px-4 lg:pb-10 lg:pt-4 py-10 border-2 border-slate-200 lg:border-white hover:border-slate-200 cursor-pointer rounded-xl mb-20">
             <Link to={`/product/${productId}`}>
                 <div className="flex justify-center relative mb-14 overflow-hidden h-64">
                     <div
@@ -15,7 +15,7 @@ const ProductCard = ({ productName, productPrice, productRating, productReviews,
                         <img src={imgUrl} alt=""
                             className='h-full' />
                     </div>
-                    <div className="flex flex-col gap-4 absolute right-4">
+                    <div className="flex flex-col gap-4 absolute right-2">
                         <IoHeartOutline className='hover:text-red-600  rounded-full p-1 bg-white text-4xl' />
                         <FaRegEye className='hover:text-red-600  rounded-full p-1 bg-white text-4xl' />
                     </div>

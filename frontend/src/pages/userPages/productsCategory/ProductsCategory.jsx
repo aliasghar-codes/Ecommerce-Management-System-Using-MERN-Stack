@@ -12,6 +12,7 @@ const ProductCategory = () => {
 
     useEffect(() => {
         fetchProducts();
+        window.scrollTo(0, 0);
     }, [category]);
 
     const fetchProducts = async () => {
@@ -24,9 +25,9 @@ const ProductCategory = () => {
     }
 
     return (
-        <main className='my-40 px-40'>
+        <main className='my-40 px-6 lg:px-40'>
             {
-                itemsFound.length > 0 && <h1 className='text-5xl font-bold mb-36'>Your Products</h1>
+                itemsFound.length > 0 && <h1 className='lg:text-5xl text-3xl font-bold lg:mb-36 mb-20'>Your Products</h1>
             }
             <div className=" mt-15 flex w-full flex-wrap gap-6 mb-20">
                 {

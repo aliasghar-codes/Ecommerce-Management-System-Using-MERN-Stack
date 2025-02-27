@@ -23,7 +23,8 @@ const product = () => {
     useEffect(() => {
         fetchProduct();
         fetchReviews();
-    }, [productId])
+        window.scrollTo(0, 0);
+    }, [productId]);
 
     const fetchProduct = async () => {
         try {
@@ -100,32 +101,33 @@ const product = () => {
                 </h1>
             </div>
         )
+
     return (
-        <main className="container">
-            <section className="flex mt-40 mb-20">
-                <div>
+        <main className="lg:px-40 px-6">
+            <section className="flex lg:flex-nowrap flex-wrap mt-40 mb-20">
+                <div className='w-2/12'>
                     {
                         productDetail.images.map(imag => (
                             <div
                                 key={imag}
                                 onClick={() => setMainImg(imag)}
-                                className="h-32 w-32 mb-10 cursor-pointer border-2 flex justify-center items-center p-4 mr-16 hover:border-slate-300 hover:shadow-lg">
+                                className="lg:h-32 h-24 w-24 lg:w-32 mb-10 cursor-pointer border-2 flex justify-center items-center p-4 lg:mr-16 hover:border-slate-300 hover:shadow-lg">
                                 <img src={"http://localhost:8000/" + imag} className='h-full' alt="" />
                             </div>
                         ))
                     }
                 </div>
                 <div
-                    className="w-1/3 flex justify-center items-center h-[40rem]">
+                    className="w-3/4 ml-10 lg:ml-0 lg:w-1/3 flex justify-center items-center h-[40rem]">
                     <img src={"http://localhost:8000/" + mainImg} alt=""
                         className="rounded-md h-[35rem]" />
                 </div>
                 <div
-                    className="ml-40 w-1/2">
+                    className="lg:ml-40 lg:w-1/2 w-full mt-20 lg:mt-0">
                     <div
                         className="pb-10 border-b-2 flex items-center justify-between">
                         <h2
-                            className="font-semibold text-3xl leading-relaxed">
+                            className="font-semibold text-2xl lg:text-3xl leading-relaxed">
                             {productDetail.name}
                         </h2>
                         {
@@ -203,19 +205,19 @@ const product = () => {
                     ) : null
                 }
             </section>
-            <AddReview productId={productDetail._id} />
+            <AddReview productId={productDetail._id} fetchReviews={fetchReviews} />
             <section className='mb-32'>
-                <h2 className='mb-12 text-3xl font-bold'>Ratings & Reviews of {productDetail.name}</h2>
+                <h2 className='mb-12 text-2xl lg:text-3xl font-bold'>Ratings & Reviews of {productDetail.name}</h2>
                 {
                     productReview.length > 0 ? (
                         productReview.map(review => (
                             <div key={review._id} className='border-b-2 mb-12 pb-5'>
                                 <div className='flex items-center gap-7 mb-8'>
                                     <div className='flex items-center gap-3 bg-red-500 text-white py-1 px-2 rounded-md text-lg'>
-                                        <span className=''>{review.rating}</span>
+                                        <span className='text-xs lg:text-xl'>{review.rating}</span>
                                         <RxStarFilled />
                                     </div>
-                                    <h3 className='text-3xl font-bold'>{review.name}</h3>
+                                    <h3 className='lg:text-3xl text-2xl font-bold'>{review.name}</h3>
                                 </div>
                                 <p>{review.reviewText}</p>
                             </div>

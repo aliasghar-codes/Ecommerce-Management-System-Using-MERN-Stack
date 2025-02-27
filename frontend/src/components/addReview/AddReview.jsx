@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 
-const AddReview = ({ productId }) => {
+const AddReview = ({ productId, fetchReviews }) => {
     const [name, setName] = useState("");
     const [rating, setRating] = useState("");
     const [reviewText, setReviewText] = useState("");
@@ -29,21 +29,22 @@ const AddReview = ({ productId }) => {
                     "Content-Type": "application/json"
                 }
             });
+
             toast.success("Review added successfully")
             setName("");
             setRating("");
             setReviewText("");
 
+            fetchReviews();
+
         } catch (error) {
-            console.log(error.response.data.message)
-            console.log(error.data)
             toast.error(error.response.data.message || "Error occured while adding review");
             return;
         }
     }
 
     return (
-        <section className='mb-32 w-1/2'>
+        <section className='mb-32 w-full lg:w-1/2'>
             <h2 className='mb-12 text-3xl font-bold'>Your Review</h2>
             <div className='flex justify-between mb-12'>
             <input type="text" placeholder='Your Name' value={name}
@@ -51,7 +52,7 @@ const AddReview = ({ productId }) => {
                 className='border-2 py-2 px-4 rounded w-2/3 outline-none' />
             <input type="number" placeholder='Rating' value={rating} 
                 onChange={ ({ target }) => setRating(target.value)}
-                className='border-2 py-2 px-4 rounded w-72 outline-none'/>
+                className='border-2 py-2 px-4 rounded w-2/6 ml-5 outline-none'/>
             </div>
             <textarea placeholder='Your Review' value={reviewText}
                 onChange={ ({target}) => setReviewText(target.value) }

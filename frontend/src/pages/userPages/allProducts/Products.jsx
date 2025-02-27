@@ -26,9 +26,9 @@ const products = () => {
   }
 
   return (
-    <main className='my-40 px-40'>
-      <h1 className='text-5xl font-bold mb-36'>Your search results for "{queryString}"</h1>
-      <div className=" mt-15 flex w-full flex-wrap gap-6 mb-20">
+    <main className='my-40 px-6 lg:px-40'>
+      <h1 className='text-3xl lg:text-5xl font-bold lg:mb-36 mb-20'>Your search results for "{queryString}"</h1>
+      <div className="mt-15 flex w-full flex-wrap gap-6 mb-20">
       {
         itemsFound.length > 0 ? (
           itemsFound.map( product => (

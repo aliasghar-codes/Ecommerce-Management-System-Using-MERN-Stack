@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import AdminHeader from "../../../components/adminHeader/AdminHeader.jsx"
-import { toast } from 'react-toastify';
 import axios from 'axios';
 
 const adminDashboard = () => {
-    const [data, setData] = useState("");
+    const [data, setData] = useState({
+        totalSignup: 0,
+        ordersPending: 0,
+        totalSale: 0,
+        totalProducts: 0,
+        totalMessages: 0,
+        activeCoupons: 0,
+    });
 
     useEffect(() => {
         fetchData();
@@ -15,7 +21,7 @@ const adminDashboard = () => {
             const response = await axios.get("/api/v1/dashboard/get-info")
             setData(response.data.data)
         } catch (error) {
-            toast.error("Error occured while fetching data");
+            console.log(error);
         }
     }
 

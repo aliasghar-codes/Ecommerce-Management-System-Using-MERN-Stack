@@ -17,8 +17,8 @@ const JustForYou = () => {
     }
 
     return (
-        <section style={{ paddingBottom: "4.5rem" }} className="container border-b-2 border-b-slate-200">
-                <h2 className='text-6xl font-bold mb-32'>Just For You</h2>
+        <section style={{ paddingBottom: "4.5rem" }} className="lg:px-40 px-6 border-b-2 border-b-slate-200">
+                <h2 className='lg:text-6xl text-5xl font-medium lg:font-bold lg:mb-32 mb-24'>Just For You</h2>
                 <div className=" mt-15 flex w-full flex-wrap justify-between mb-20">
                     {
                         products.map( product => (
@@ -34,7 +34,7 @@ const JustForYou = () => {
                         ))
                     }
                 </div>
-                <Link to="/products/category/home" className="text-white bg-red-500 hover:bg-red-600 py-6 rounded text-3xl font-light mx-auto block w-1/6 text-center">View All Products</Link>
+                <Link to="/products/category/home" className="text-white bg-red-500 hover:bg-red-600 py-6 rounded text-3xl font-light mx-auto block lg:w-1/6 text-center">View All Products</Link>
             </section>
     )
 }
