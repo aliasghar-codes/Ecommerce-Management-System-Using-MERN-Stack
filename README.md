@@ -1,4 +1,4 @@
-# E-Commerce Management System
+# Pakistan Shopping Mall
 
 An online store built with the MERN stack. Customers can sign up, browse products, fill a cart, place orders and leave reviews. Admins get their own panel to manage products, categories, coupons, orders and messages.
 
